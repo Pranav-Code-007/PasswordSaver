@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <script>
+        function validate_form() {
+
+            let mail_id = document.signIn.mail_id.value.trim();
+            let password = document.signIn.password.value.trim();
+
+            if (!/^[a-z0-9._]+@[a-z]+(?:\.[a-z]+)*$/.test(mail_id)) {
+
+                alert("Email Id is not valid");
+                return false;
+
+            } else if (password.length < 8 || password.length > 12) {
+                alert("password's length should be in range 8 to 12 length character");
+                return false
+            }
+
+            return true;
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class="active"> Sign In </h2>
+
+
+            <!-- Login Form -->
+            <form name="signIn" method="post" action="user" onsubmit="return validate_form()">
+                <input type="text" id="login" class="fadeIn second" name="mail_id" placeholder="mail id" minlength="5" maxlength="20"required>
+                <input type="text" id="password" class="fadeIn third" name="password" placeholder="password" minlength="8" maxlength="12" required>
+                <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+                <a class="underlineHover" href="signup.html">Signup</a>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

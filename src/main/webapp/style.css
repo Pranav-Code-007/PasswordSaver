@@ -1,0 +1,44 @@
+     .bar {
+         word-spacing: 2.5mm;
+         margin-left: 80%;
+         margin-top: 5mm;
+         font-weight: 800;
+         font-family: 'Lato', sans-serif;
+         ;
+     }
+     
+     .Title {
+         margin-top: 11mm;
+         margin-left: 2%;
+         text-align: center;
+         font-family: 'McLaren', cursive;
+     }
+     
+     .logo {
+         height: 30%;
+         width: 40%;
+         display: block;
+         object-fit: contain;
+         margin-top: 2%;
+         margin-left: auto;
+         margin-right: auto;
+     }
+     
+     .contents {
+         text-align: center;
+         font-family: 'Lato', sans-serif;
+         font-size: 120%;
+     }
+     
+     footer {
+         word-spacing: 0.2em;
+         font-family: serif;
+         text-align: center;
+     }
+     /**
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url("lock.jpg");
+            background-repeat: no-repeat;
+            background-size: 60% 180%;
+            background-position: center -2mm;
+        */

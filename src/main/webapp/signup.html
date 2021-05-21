@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="signupstyle.css">
+
+
+    <script>
+        function validate_form() {
+            let firstName = document.signUp.name.value.trim();
+            let lastName = document.signUp.lastname.value.trim();
+            let mail_id = document.signUp.mail_id.value.trim();
+            let password = document.signUp.password.value.trim();
+
+            if ( !/^[A-Za-z]+$/.test(firstName) || firstName.includes(" ") || 
+            		lastName.includes(" ") || firstName.length < 3 ||
+            		firstName.length > 20 || lastName.length>20 ||  lastName.length < 3) {
+                alert("Incorrect Name");
+                return false;
+            } else if (!/^[a-z0-9._]+@[a-z]+(?:\.[a-z]+)*$/.test(mail_id)) {
+            	// ^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$
+
+
+                alert("Email Id is not valid");
+                return false
+
+
+            } else if (password.length < 8 || password.length > 12) {
+                alert("password's length should be in range 8 to 12 length character");
+                return false
+            }
+
+            return true;
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class="active"> Sign Up </h2>
+
+
+            <!-- Login Form -->
+            <form name="signUp" method="post" action="SignUpSuccess"  onsubmit="return validate_form()">
+                <input type="text" id="name" name="name" placeholder="first name" minlength="3" maxlength="15" required>
+                <input type="text" id="lastname" name="lastname" placeholder="last name" minlength="3" maxlength="15"required>
+                <input type="text" id="mail_id" name="mail_id" placeholder="mail id" minlength="5" maxlength="20"required>
+                <input type="text" id="password" name="password" placeholder="password" minlength="8" maxlength="12" required>
+                <input type="submit" value="Register">
+            </form>
+
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

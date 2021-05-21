@@ -1,0 +1,78 @@
+@charset "ISO-8859-1";
+body {
+    margin-top: 20px;
+    color: #070707;
+    background: url("bimage.jpg");
+    background-repeat: repeat-y;
+}
+
+.pbutton {
+    padding-left: 8%;
+}
+
+button {
+    color: white;
+    background-color: #000;
+    border-color: rgb(185, 93, 181);
+    border-width: 3px;
+    text-align: center;
+    cursor: pointer;
+    width: 80px;
+    height: 63px;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.863);
+    border-color: white;
+}
+
+.editlink {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 1%;
+    border-radius: 100px;
+    height: 25px;
+    box-shadow: 0 0 10px 0 rgb(8, 0, 8);
+    margin: left 80%;
+    background-color: black;
+}
+
+.linked {
+    color: rgb(255, 255, 255);
+    margin: 5px;
+    font-weight: bolder;
+}
+
+a {
+    font-weight: bold;
+}
+
+
+.edit{
+	margin-top:13px;
+}
+.add{
+	margin-top:13px;
+}
+h1 {
+    text-align: center;
+    text-decoration: black;
+    font-size: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1.5px;
+    word-spacing: 15px;
+    background-color: yellow;
+}
+
+.di {
+    margin-right: 30%;
+    margin-left: 30%;
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgb(0, 0, 0);
+}
